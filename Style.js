@@ -2,12 +2,12 @@
 <html>
     <head>
     <script>
-        document.write("Assalamualaikum")
+        document.write("Hello !")
     </script>
     </head>
     <body>
 <script>
-document.write("Hallo")
+document.write("Hallo !")
 </script>
     </body>
 </html>
