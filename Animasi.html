@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Klik untuk Menang</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #467a4f;
+        }
+
+        .game-container {
+            text-align: center;
+        }
+
+        #click-box {
+            width: 100px;
+            height: 100px;
+            background-color: #ece5a3;
+            cursor: pointer;
+            position: absolute;
+            display: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #94df3f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c1cf3e;
+        }
+
+        .result {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="game-container">
+        <h2>Game Klik untuk Menang</h2>
+        <button onclick="startGame()">Mulai Permainan</button>
+        <p id="result" class="result"></p>
+        <div id="click-box" onclick="catchClick()"></div>
+    </div>
+
+    <script>
+        let score = 0;
+        let gameInterval;
+
+        function startGame() {
+            score = 0;
+            document.getElementById("result").textContent = "Skor: " + score;
+            showRandomBox();
+            gameInterval = setInterval(showRandomBox, 1000); // Menampilkan kotak setiap detik
+        }
+
+        function showRandomBox() {
+            const box = document.getElementById("click-box");
+            const randomX = Math.floor(Math.random() * (window.innerWidth - 100));
+            const randomY = Math.floor(Math.random() * (window.innerHeight - 100));
+
+            box.style.left = randomX + 'px';
+            box.style.top = randomY + 'px';
+            box.style.display = 'block';
+        }
+
+        function catchClick() {
+            score++;
+            document.getElementById("result").textContent = "Skor: " + score;
+            document.getElementById("click-box").style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
