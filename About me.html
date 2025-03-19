@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="gaya.css">
+    <div class="running-text">
+        📚 Selamat Datang di Perpustakaan Teuku Armansyah!📖
+    </div>
+
     <title>Halaman ini berisi tentang diri saya</title>
     <style>body { font-family: 'Times New Roman', Times, serif, sans-serif; text-align: center; padding: 50px; }
         table { margin: 0 auto; border-collapse: collapse; width: 50%; }
@@ -45,5 +49,21 @@
         </tr>
     </table>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            for (let i = 0; i < 20; i++) {
+                let bubble = document.createElement("div");
+                bubble.className = "bubble";
+                bubble.style.left = Math.random() * 100 + "vw";
+                bubble.style.width = bubble.style.height = Math.random() * 50 + "px";
+                bubble.style.animationDuration = Math.random() * 3 + 3 + "s";
+                document.body.appendChild(bubble);
+            }
+        });
+    </script>
+
 </body>
+<footer>
+    © 2025 Perpustakaan Teuku Armansyah | Pengembangan Web Praktik
+</footer>
 </html>
