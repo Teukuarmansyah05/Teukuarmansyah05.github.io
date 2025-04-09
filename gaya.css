@@ -1,4 +1,4 @@
-body {background-color: #467a4f;}
+
 h1 {font-size:36pt;}
 h2 {color:black}
 
@@ -34,18 +34,11 @@ ul {
     text-align: right;
   }
 
-  body {
-    margin: 0;
-    height: 100vh;
-    background: #467a4f;
-    overflow: hidden;
-}
-
 body {
   margin: 0;
   height: 100vh;
   background: #467a4f;
-  overflow: hidden;
+
 }
 
 .bubble {
