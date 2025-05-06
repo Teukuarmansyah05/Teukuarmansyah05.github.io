@@ -65,12 +65,3 @@ footer {
   text-align: center;
   padding: 10px 0;
 }
-
-.running-text {
-  white-space: nowrap;
-  overflow: hidden;
-  display: block;
-  font-size: 20px;
-  color: black;
-  animation: marquee 14s linear infinite;
-}
